@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websocket test</title>
+</head>
+<body>
+    <h1>websocket test 1</h1>
+
+    <!-- some js to recv data from websocket-->
+    <script>
+        //get socket
+        var ws = new WebSocket("ws://localhost:8000/ws");
+        //on connect to socket
+        ws.onopen = function() {
+            console.log("connected");
+        };
+        //on message from socket
+        ws.onmessage = function(event) {
+            console.log(event.data);
+        };
+        //on error
+        ws.onerror = function() {
+            console.log("error");
+        };
+        //on close
+        ws.onclose = function() {
+            console.log("disconnected");
+        };
+    </script>
+</body>
+</html>
