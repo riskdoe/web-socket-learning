@@ -2,4 +2,4 @@
 learning how to use web sockets with fastapi
 
 
-test commit to make sure git working
+tldr im following the documentation for web sockets on https://fastapi.tiangolo.com/advanced/websockets/#__tabbed_1_1
